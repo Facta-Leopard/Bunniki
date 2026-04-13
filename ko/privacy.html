@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>라비키 개인정보처리방침</title>
+  <style>
+    :root { color-scheme: light; --bg:#f6f3ee; --paper:#fffdf8; --text:#1f1a17; --muted:#6e6258; --line:#e7ddd2; --accent:#8b5e34; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Helvetica Neue\",sans-serif; background:linear-gradient(180deg,#f7f3ed 0%,#efe6db 100%); color:var(--text); }
+    .wrap { max-width:860px; margin:0 auto; padding:48px 20px 72px; }
+    .card { background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:32px; box-shadow:0 20px 60px rgba(45,27,10,.08); }
+    h1 { margin:0 0 8px; font-size:2.2rem; }
+    h2 { margin:32px 0 12px; font-size:1.15rem; }
+    p, li { line-height:1.8; }
+    .muted { color:var(--muted); }
+    .nav { display:flex; gap:12px; flex-wrap:wrap; margin:0 0 24px; }
+    .nav a { text-decoration:none; color:var(--accent); font-weight:600; }
+    .badge { display:inline-block; padding:6px 10px; border-radius:999px; background:#f1e4d4; color:#6d4a24; font-size:.85rem; margin-bottom:16px; }
+    ul { padding-left:20px; }
+    footer { margin-top:32px; color:var(--muted); font-size:.95rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="badge">라비키 개인정보처리방침</div>
+      <div class="nav">
+        <a href="/ko/privacy.html">한국어</a>
+        <a href="/en/privacy.html">English</a>
+        <a href="/ko/support.html">지원 페이지</a>
+      </div>
+      <h1>개인정보처리방침</h1>
+      <p class="muted">최종 업데이트: 2026년 4월 13일</p>
+
+      <p>라비키는 사용자가 직접 선택한 볼트와 문서를 읽고, 별도로 선택한 출력 라이브러리에 위키 결과물을 기록하는 macOS 앱입니다. 라비키는 원본 소스 파일을 수정하지 않습니다.</p>
+
+      <h2>1. 라비키가 접근할 수 있는 데이터</h2>
+      <ul>
+        <li>사용자가 직접 선택한 소스 파일과 폴더. 여기에는 Markdown, 텍스트, 지원되는 PDF 파일이 포함됩니다.</li>
+        <li>생성된 위키 페이지, 인덱스, 질의 결과, 진단 로그를 기록하기 위해 사용자가 선택한 출력 라이브러리 경로.</li>
+        <li>선택한 모델명, Base URL 같은 Provider 설정 정보.</li>
+        <li>사용자가 입력한 API 키 등 비밀값. 이런 정보는 macOS Keychain에 저장됩니다.</li>
+      </ul>
+
+      <h2>2. 소스 데이터의 사용 방식</h2>
+      <p>라비키는 선택된 소스 내용을 사용해 검색 인덱스를 만들고, 위키 질의에 답변하며, 선택한 출력 라이브러리 안에서 위키 페이지를 생성하거나 갱신합니다. 원본 소스 파일은 제자리에서 유지되며 라비키가 수정하지 않습니다.</p>
+
+      <h2>3. 원격 AI Provider</h2>
+      <p>OpenAI API, Codex, 또는 네트워크상 다른 위치에서 동작하는 OpenAI 호환 로컬 endpoint 같은 원격 또는 네트워크 Provider를 선택하면, 라비키는 질의 답변이나 위키 초안 생성에 필요한 프롬프트, 선택된 위키 문맥, 추출된 지원 텍스트를 해당 Provider로 전송할 수 있습니다.</p>
+      <p>Apple Foundation Models를 온디바이스로 사용하는 경우에는, Apple 플랫폼 가용 범위 안에서 현재 Mac 내부에서만 처리됩니다.</p>
+
+      <h2>4. 로컬 저장</h2>
+      <ul>
+        <li>앱 설정, 세션, 페이지 매니페스트, 실행 이력은 로컬에 저장됩니다.</li>
+        <li>생성된 위키 페이지, 로그, 진단 정보는 선택한 출력 라이브러리 내부에만 저장됩니다.</li>
+        <li>API 키 같은 인증 정보는 출력 라이브러리가 아니라 macOS Keychain에 저장됩니다.</li>
+      </ul>
+
+      <h2>5. 데이터 공유</h2>
+      <p>라비키는 자체 클라우드 서비스를 운영하지 않습니다. 데이터는 사용자가 명시적으로 설정하고 사용하는 Provider에게만 전달됩니다.</p>
+
+      <h2>6. 사용자 선택권</h2>
+      <ul>
+        <li>어떤 폴더와 파일에 접근할지 사용자가 직접 선택합니다.</li>
+        <li>어떤 Provider를 사용할지 사용자가 직접 선택하며, 저장된 인증 정보는 언제든 제거할 수 있습니다.</li>
+        <li>설정 화면에서 앱 데이터를 초기화할 수 있습니다.</li>
+      </ul>
+
+      <h2>7. 문의</h2>
+      <p>개인정보 또는 지원 관련 문의는 <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a> 으로 보내주세요.</p>
+
+      <footer>제작자: Facta_Leopard<br>조력자: Codex</footer>
+    </div>
+  </div>
+</body>
+</html>
