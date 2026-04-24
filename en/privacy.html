@@ -3,75 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rabbiki Privacy Policy</title>
+  <title>Bunniki Privacy Policy</title>
   <style>
-    :root { color-scheme: light; --bg:#f6f3ee; --paper:#fffdf8; --text:#1f1a17; --muted:#6e6258; --line:#e7ddd2; --accent:#8b5e34; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif; background:linear-gradient(180deg,#f7f3ed 0%,#efe6db 100%); color:var(--text); }
-    .wrap { max-width:860px; margin:0 auto; padding:48px 20px 72px; }
-    .card { background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:32px; box-shadow:0 20px 60px rgba(45,27,10,.08); }
-    h1 { margin:0 0 8px; font-size:2.2rem; }
-    h2 { margin:32px 0 12px; font-size:1.15rem; }
-    p, li { line-height:1.7; }
-    .muted { color:var(--muted); }
-    .nav { display:flex; gap:12px; flex-wrap:wrap; margin:0 0 24px; }
-    .nav a { text-decoration:none; color:var(--accent); font-weight:600; }
-    .badge { display:inline-block; padding:6px 10px; border-radius:999px; background:#f1e4d4; color:#6d4a24; font-size:.85rem; margin-bottom:16px; }
-    ul { padding-left:20px; }
-    footer { margin-top:32px; color:var(--muted); font-size:.95rem; }
+    :root { color-scheme: light; --bg:#f7f0e8; --paper:#fffdf8; --text:#241914; --muted:#715f52; --line:#eadccf; --accent:#a4552f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; background: linear-gradient(180deg, #fff7ed 0%, var(--bg) 100%); color: var(--text); }
+    main { max-width: 880px; margin: 0 auto; padding: 48px 20px 72px; }
+    article { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 32px; box-shadow: 0 18px 54px rgba(83, 45, 20, .09); }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 4vw, 2.6rem); }
+    h2 { margin: 32px 0 12px; font-size: 1.18rem; }
+    p, li { line-height: 1.75; }
+    a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    ul { padding-left: 20px; }
+    .muted { color: var(--muted); }
+    .nav { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 26px; }
+    .badge { display: inline-block; margin-bottom: 16px; padding: 6px 11px; border-radius: 999px; background: #f3e3d3; color: #714326; font-size: .86rem; font-weight: 700; }
+    footer { margin-top: 32px; color: var(--muted); font-size: .95rem; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <div class="badge">Rabbiki Privacy Policy</div>
-      <div class="nav">
-        <a href="/en/privacy.html">English</a>
-        <a href="/ko/privacy.html">한국어</a>
-        <a href="/en/support.html">Support</a>
-      </div>
-      <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: April 13, 2026</p>
+  <main>
+    <article>
+      <div class="badge">Bunniki Privacy Policy</div>
+      <nav class="nav" aria-label="Document links">
+        <a href="/Bunniki/en/privacy.html">English</a>
+        <a href="/Bunniki/ko/privacy.html">한국어</a>
+        <a href="/Bunniki/en/support.html">Support</a>
+      </nav>
 
-      <p>Rabbiki is a macOS app that reads user-selected vaults and documents, then writes generated wiki output into a separate output library chosen by the user. Rabbiki does not edit the original source files.</p>
+      <h1>Bunniki Privacy Policy</h1>
+      <p class="muted">Last updated: April 24, 2026</p>
+      <p>Bunniki is a macOS app that helps users generate and query a wiki from local documents and folders selected by the user. Bunniki does not scan locations the user has not selected and does not modify original source files.</p>
 
-      <h2>1. Data Rabbiki can access</h2>
+      <h2>Data the App Processes</h2>
       <ul>
-        <li>User-selected source files and folders, including Markdown, text, and supported PDF files.</li>
-        <li>User-selected output library paths where Rabbiki writes generated wiki pages, indexes, query results, diagnostics, and logs.</li>
-        <li>Provider configuration data such as selected model names or base URLs.</li>
-        <li>Secrets such as API keys, when provided by the user, stored in the macOS Keychain.</li>
+        <li>Text and file metadata from source files and folders selected by the user</li>
+        <li>Generated wiki documents, run history, indexes, caches, and diagnostics</li>
+        <li>User questions, wiki context, and generation instructions</li>
+        <li>Selected Provider settings, API keys, OAuth tokens, and optional Provider account identifiers</li>
       </ul>
 
-      <h2>2. How source data is used</h2>
-      <p>Rabbiki uses selected source content to build a searchable index, answer wiki queries, and generate or refresh wiki pages inside the selected output library. Source files remain in place and are not modified by Rabbiki.</p>
+      <h2>Local Storage</h2>
+      <p>Bunniki stores data in the output library selected by the user and in the app support folder. Provider credentials are stored in a local encrypted store using Apple CryptoKit AES-GCM. This store is not Apple Keychain, and it is used locally on the user's Mac.</p>
 
-      <h2>3. Remote AI providers</h2>
-      <p>If you choose a remote or networked provider such as OpenAI API, Codex, or a local OpenAI-compatible endpoint running elsewhere on your network, Rabbiki may send prompts, selected wiki context, and supporting extracted text needed to answer a query or draft wiki content to that provider.</p>
-      <p>If you use Apple Foundation Models on-device, generation stays on the current Mac subject to Apple platform availability.</p>
+      <h2>Remote Providers</h2>
+      <p>When OpenAI API, Codex OAuth, or a user-configured OpenAI-compatible network endpoint is used, Bunniki may send the user's question, wiki context, generation instructions, and excerpts from user-selected documents to that Provider to provide the requested feature. Bunniki discloses this in the app and asks for consent before using network-based Providers for document or query processing.</p>
+      <p>Apple Foundation Models Provider uses on-device models when available.</p>
 
-      <h2>4. Local storage</h2>
-      <ul>
-        <li>App settings, sessions, page manifests, and run history are stored locally.</li>
-        <li>Generated wiki pages, logs, and diagnostics are stored only inside the selected output library.</li>
-        <li>API keys or similar credentials are stored in the macOS Keychain, not in the output library.</li>
-      </ul>
+      <h2>Tracking and Advertising</h2>
+      <p>Bunniki does not include advertising tracking, third-party advertising SDKs, or remote analytics SDKs. The in-app banner is a first-party sponsorship and partnership inquiry area.</p>
 
-      <h2>5. Data sharing</h2>
-      <p>Rabbiki does not operate its own cloud service. Data is shared only with the providers you explicitly configure and use.</p>
+      <h2>Data Deletion</h2>
+      <p>Users can delete query history, run history, wikis, source links, Provider credentials, and app state in the app. Files in the selected output library can also be deleted directly in Finder.</p>
 
-      <h2>6. Your choices</h2>
-      <ul>
-        <li>You choose which folders and files Rabbiki can access.</li>
-        <li>You choose which provider to use, and you can remove provider credentials at any time.</li>
-        <li>You can reset app data from the Settings screen.</li>
-      </ul>
+      <h2>Contact</h2>
+      <p>For privacy questions, contact <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a>.</p>
 
-      <h2>7. Contact</h2>
-      <p>For privacy or support questions, contact <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a>.</p>
-
-      <footer>Creator: Facta_Leopard<br>Assistant: Codex</footer>
-    </div>
-  </div>
+      <footer>Bunniki by Facta_Leopard</footer>
+    </article>
+  </main>
 </body>
 </html>
