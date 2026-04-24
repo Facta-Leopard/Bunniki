@@ -3,61 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>라비키 지원 페이지</title>
+  <title>Bunniki 지원</title>
   <style>
-    :root { color-scheme: light; --bg:#f6f3ee; --paper:#fffdf8; --text:#1f1a17; --muted:#6e6258; --line:#e7ddd2; --accent:#8b5e34; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Helvetica Neue\",sans-serif; background:linear-gradient(180deg,#f7f3ed 0%,#efe6db 100%); color:var(--text); }
-    .wrap { max-width:860px; margin:0 auto; padding:48px 20px 72px; }
-    .card { background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:32px; box-shadow:0 20px 60px rgba(45,27,10,.08); }
-    h1 { margin:0 0 8px; font-size:2.2rem; }
-    h2 { margin:32px 0 12px; font-size:1.15rem; }
-    p, li { line-height:1.8; }
-    .muted { color:var(--muted); }
-    .nav { display:flex; gap:12px; flex-wrap:wrap; margin:0 0 24px; }
-    .nav a { text-decoration:none; color:var(--accent); font-weight:600; }
-    .badge { display:inline-block; padding:6px 10px; border-radius:999px; background:#f1e4d4; color:#6d4a24; font-size:.85rem; margin-bottom:16px; }
-    ul { padding-left:20px; }
-    footer { margin-top:32px; color:var(--muted); font-size:.95rem; }
+    :root { color-scheme: light; --bg:#f7f0e8; --paper:#fffdf8; --text:#241914; --muted:#715f52; --line:#eadccf; --accent:#a4552f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Helvetica Neue", sans-serif; background: linear-gradient(180deg, #fff7ed 0%, var(--bg) 100%); color: var(--text); }
+    main { max-width: 880px; margin: 0 auto; padding: 48px 20px 72px; }
+    article { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 32px; box-shadow: 0 18px 54px rgba(83, 45, 20, .09); }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 4vw, 2.6rem); }
+    h2 { margin: 32px 0 12px; font-size: 1.18rem; }
+    p, li { line-height: 1.8; }
+    a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    ul { padding-left: 20px; }
+    .muted { color: var(--muted); }
+    .nav { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 26px; }
+    .badge { display: inline-block; margin-bottom: 16px; padding: 6px 11px; border-radius: 999px; background: #f3e3d3; color: #714326; font-size: .86rem; font-weight: 700; }
+    footer { margin-top: 32px; color: var(--muted); font-size: .95rem; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <div class="badge">라비키 지원 페이지</div>
-      <div class="nav">
-        <a href="/ko/support.html">한국어</a>
-        <a href="/en/support.html">English</a>
-        <a href="/ko/privacy.html">개인정보처리방침</a>
-      </div>
-      <h1>지원 페이지</h1>
-      <p class="muted">라비키 사용자, 리뷰어, 앱스토어 지원 문의를 위한 안내입니다.</p>
+  <main>
+    <article>
+      <div class="badge">Bunniki Support</div>
+      <nav class="nav" aria-label="문서 링크">
+        <a href="/Bunniki/ko/support.html">한국어</a>
+        <a href="/Bunniki/en/support.html">English</a>
+        <a href="/Bunniki/ko/privacy.html">개인정보처리방침</a>
+      </nav>
+
+      <h1>Bunniki 지원</h1>
+      <p class="muted">Bunniki 관련 문의, 버그 제보, App Store 지원 요청을 위한 공식 지원 페이지입니다.</p>
 
       <h2>연락처</h2>
       <p>이메일: <a href="mailto:shteosis@gmail.com">shteosis@gmail.com</a></p>
 
       <h2>문의 시 포함하면 좋은 정보</h2>
       <ul>
-        <li>사용 중인 macOS 버전과 라비키 앱 버전</li>
-        <li>사용 중이던 Provider 종류</li>
+        <li>사용 중인 macOS 버전과 Bunniki 앱 버전</li>
+        <li>사용한 Provider 종류</li>
+        <li>문제가 발생한 작업: 위키 생성, 질의, 소스 연결, Provider 설정 등</li>
         <li>기대한 동작과 실제 발생한 동작</li>
-        <li>가능하다면 스크린샷 또는 오류 문구</li>
+        <li>개인정보나 민감한 원문을 제외한 오류 메시지 또는 스크린샷</li>
       </ul>
 
       <h2>지원 범위</h2>
       <ul>
         <li>설치 및 실행 문제</li>
         <li>소스 연결과 출력 라이브러리 설정 문제</li>
-        <li>위키 갱신, 질의, lint, 웹 위키 미리보기 문제</li>
-        <li>OpenAI, Local API, Codex, Apple Provider 연결 문제</li>
-        <li>앱스토어 리뷰 후속 문의 및 정책 관련 문의</li>
+        <li>위키 생성, 위키 갱신, 질의, 웹 위키 보기 문제</li>
+        <li>OpenAI API, Codex OAuth, Local API, Apple Foundation Models Provider 연결 문제</li>
+        <li>App Store 심사 후속 문의 및 정책 관련 문의</li>
       </ul>
 
-      <h2>응답 안내</h2>
-      <p>지원은 가능한 범위에서 제공됩니다. 문제 재현에 꼭 필요하지 않다면 민감한 개인정보는 보내지 않는 것을 권장합니다.</p>
+      <h2>안내</h2>
+      <p>지원은 가능한 범위에서 제공됩니다. 문제 재현에 꼭 필요하지 않다면 민감한 개인정보나 원문 문서는 보내지 않는 것을 권장합니다.</p>
 
-      <footer>제작자: Facta_Leopard<br>조력자: Codex</footer>
-    </div>
-  </div>
+      <footer>Bunniki by Facta_Leopard</footer>
+    </article>
+  </main>
 </body>
 </html>
