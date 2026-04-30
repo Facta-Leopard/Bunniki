@@ -32,14 +32,14 @@
       </nav>
 
       <h1>Bunniki Privacy Policy</h1>
-      <p class="muted">Last updated: April 29, 2026</p>
-      <p>Bunniki is a macOS and iPadOS app that helps users generate, browse, and query a wiki from local documents and folders selected by the user. Bunniki does not scan locations the user has not selected and does not modify original source files.</p>
+      <p class="muted">Last updated: April 30, 2026</p>
+      <p>Bunniki is a macOS and iPadOS app that helps users generate, browse, and query a wiki from local documents and folders selected by the user. It can also answer in Chatbot Mode, which sends a regular chat request to the selected Provider without searching the local wiki. Bunniki does not scan locations the user has not selected and does not modify original source files.</p>
 
       <h2>Data the App Processes</h2>
       <ul>
         <li>Text and file metadata from source files and folders selected by the user</li>
         <li>Generated wiki documents, run history, indexes, caches, and diagnostics</li>
-        <li>User questions, wiki context, and generation instructions</li>
+        <li>User questions, wiki context when wiki-based answers are used, conversation history, and generation instructions</li>
         <li>Selected Provider settings, API keys, OAuth tokens, and optional Provider account identifiers</li>
         <li>Ad-related data processed by Google Mobile Ads SDK on iPadOS when ads are shown, as described below</li>
       </ul>
@@ -48,7 +48,7 @@
       <p>Bunniki stores data in the output library selected by the user and in the app support folder. Provider credentials are stored in a local encrypted store using Apple CryptoKit AES-GCM. This store is not Apple Keychain, and it is used locally on the user's device.</p>
 
       <h2>Remote Providers</h2>
-      <p>When OpenAI API, Codex OAuth, or a user-configured OpenAI-compatible network endpoint is used, Bunniki may send the user's question, wiki context, generation instructions, and excerpts from user-selected documents to that Provider to provide the requested feature. Bunniki discloses this in the app and asks for consent before using network-based Providers for document or query processing.</p>
+      <p>When OpenAI API, Codex OAuth, or a user-configured OpenAI-compatible network endpoint is used, Bunniki may send the user's question, conversation history, wiki context, generation instructions, and excerpts from user-selected documents to that Provider to provide the requested feature. In Chatbot Mode, Bunniki skips local wiki search and sends a normal chat request with the user's message and recent conversation history instead of wiki excerpts. Bunniki discloses remote Provider use in the app and asks for consent before using network-based Providers for document or query processing.</p>
       <p>Apple Foundation Models Provider uses on-device models when available.</p>
 
       <h2>Advertising and Tracking</h2>
